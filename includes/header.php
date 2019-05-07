@@ -6,3 +6,7 @@
         </ul>
     </nav>
 </header>
+
+<?php
+
+?>
