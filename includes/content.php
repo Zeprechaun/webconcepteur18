@@ -18,4 +18,8 @@ $content = glob('./includes/*.inc.php');
 $page = isset($_GET['page']) ? $_GET['page'] : "";
 
 //Concaténation de la valeur récupérée pour avoir le chemin
-$page = isset($_GET['page']) ? $_GET['page'] : "";
+$page = './includes/' . $page . '.inc.php';
+
+$page = in_array($page, $content) ? $page : '.inc.php';
+
+require $page;
